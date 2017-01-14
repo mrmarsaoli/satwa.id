@@ -1,0 +1,93 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-image/iron-image.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../bower_components/iron-icons/social-icons.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="page-favorit">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+        padding: 5px 0px;
+      }
+
+      .block {
+        @apply(--layout-block);
+        height: 20px;
+        float: left;
+        width: 100%;
+      }
+    </style>
+    <h3>Hewan Favorit</h3>
+    <div class="card post-hewan">
+      <img class="img post-hewan" alt="kucing anggora" src="../img/eximage.jpg">
+      <div class="container post-hewan">
+        <div class="judul">
+          <a>Anggora muda masih takut bobo sendiri</a>
+        </div>
+        <div class="info post-hewan">
+          <a>Rp 1.000.000,00</a><br><a><iron-icon icon="room"></iron-icon>Yogyakarta</a>
+          <div style="clear: both"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card post-hewan">
+      <img class="img post-hewan" alt="kucing anggora" src="../img/ttg.jpg">
+      <div class="container post-hewan">
+        <div class="judul">
+          <a>tuturuga sehat wal afiat jarang mandi malam</a>
+        </div>
+        <div class="info post-hewan">
+          <a>Rp 500.000,00</a><br><a><iron-icon icon="room"></iron-icon>Yogyakarta</a>
+          <div style="clear: both"></div>
+        </div>
+      </div>
+    </div>
+    <div style="clear:both"></div>
+    <br>
+    <h3>Lomba Favorit</h3>
+    <div class="card post-lomba">
+      <img class="img post-lomba" alt="kucing anggora" src="../img/ikan.jpg">
+      <a class="card-tools"><paper-button class="custom brown">pesan tiket</iron-icon></paper-button><paper-icon-button noink icon="social:share"></paper-icon-button><paper-icon-button noink icon="favorite"></paper-icon-button></a>
+      <div class="container post-lomba">
+        <div class="judul">
+          <a>lomba ikan beat box mengiringi lagu mengheningkan cipta</a>
+        </div>
+      </div>
+      <div class="info post-lomba">
+        <a>27 hari lagi</a><a>500k - 1000k</a>
+      </div>
+    </div>
+    <div class="card post-lomba">
+      <img class="img post-lomba" alt="kucing anggora" src="../img/ttg.jpg">
+      <a class="card-tools"><paper-button class="custom brown">pesan tiket</iron-icon></paper-button><paper-icon-button noink icon="social:share"></paper-icon-button><paper-icon-button noink icon="favorite"></paper-icon-button></a>
+      <div class="container post-lomba">
+        <div class="judul">
+          <a>tuturuga yang baik selalu mengingatkan kawanya jangan mandi malam</a>
+        </div>
+      </div>
+      <div class="info post-lomba">
+        <a>27 hari lagi</a><a>500k - 1000k</a>
+      </div>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'page-favorit',
+    });
+  </script>
+</dom-module>

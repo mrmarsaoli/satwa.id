@@ -1,0 +1,75 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="page-home">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+        padding: 0px;
+      }
+
+      img{
+        width: 326px;
+        height: 200px;
+        object-fit: cover;
+        position: absolute;
+      }
+
+      #slider{
+        height: 160px;
+      }
+
+      paper-button.blue{
+        width: calc(100% - 10px);
+        text-transform: none;
+        font-size: 14px;
+        box-sizing: border-box;
+        margin-top: 20px;
+      }
+
+      paper-button.yellow .circle {
+        background: var(--app-primary-color);
+      }
+
+      paper-button.pink .circle {
+        background: #FF6060;
+      }
+
+      paper-button.blue .circle {
+        background: #3377BB;
+      }
+
+
+      iron-icon{
+        --iron-icon-width: 30px;
+        --iron-icon-height: 30px;
+      }
+    </style>
+    <img src="../img/eximage.jpg">
+    <div id="slider">
+    </div>
+    <paper-button raised class="custom yellow"><div class="circle"><iron-icon icon="pets"></iron-icon></div>Cari hewan</paper-button>
+    <paper-button raised class="custom pink"><div class="circle"><iron-icon icon="today"></iron-icon></div>Cari Lomba</paper-button>
+    <paper-button raised class="custom yellow"><div class="circle"><iron-icon icon="add-shopping-cart"></iron-icon></div>Jual hewan</paper-button>
+    <paper-button raised class="custom pink"><div class="circle"><iron-icon icon="add-circle-outline"></iron-icon></div>Buat Lomba</paper-button>
+    <paper-button raised class="custom blue"><div class="circle"><iron-icon icon="search"></iron-icon></div>Pelajari bagaimana Satwa.id memudahkan Anda dalam mengelola lomba</paper-button>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'page-home',
+    });
+  </script>
+</dom-module>

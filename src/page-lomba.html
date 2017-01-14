@@ -1,0 +1,120 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/iron-icons/social-icons.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="page-lomba">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding: 5px 0px;
+      }
+
+
+
+      img.img{
+          width: 100%;
+          height: 150px;
+          object-fit: cover;
+      }
+
+      .simple-card{
+        background: #fff;
+        margin-top: 10px;
+
+      }
+
+      .lomba-saya {}
+
+      .simple-card img{
+        width: 100px;
+        float: left;
+        margin:  0px 5px;
+        height:80px;
+        object-fit: cover;
+      }
+
+      .judul-holder{
+        float: left;
+        width: calc(100% - 115px);
+        margin-right: 5px;
+      }
+
+      .judul-holder a{
+        text-transform: capitalize;
+        color: #444;
+      }
+
+      .judul-holder span{
+        font-size: 12px;
+        opacity: 0.8;
+        display: block;
+        margin-top: 5px;
+      }
+
+      .info.lomba-saya{
+        border-top: thin solid #ddd;
+      }
+      .info.lomba-saya a{
+        text-align: center;
+        width: calc(50% - 20.5px);
+        padding: 5px 10px;
+        float: left;
+      }
+
+      .info.lomba-saya a:first-child{
+        border-right: thin solid #ddd;
+      }
+    </style>
+    <h3>Lomba Terdaftar</h3>
+    <div class="simple-card">
+      <img src="../img/eximage.jpg">
+      <div class="judul-holder">
+        <a>Lomba Ikan Beat Box Mengiringi Lagu Mengheningkan Cipta</a>
+        <span>30 hari lagi</span>
+      </div>
+      <div style="clear:both"></div>
+    </div>
+    <div class="simple-card">
+      <img src="../img/eximage.jpg">
+      <div class="judul-holder">
+        <a>na na na nananana  hey jude</a>
+        <span>30 hari lagi</span>
+      </div>
+      <div style="clear:both"></div>
+    </div>
+    <br>
+    <h3>Lomba Saya</h3>
+    <div class="card lomba-saya">
+      <img class="img" src="../img/eximage.jpg">
+      <div class="container lomba-saya">
+        <div class="judul">
+          <a>Lomba Ikan Beat Box Mengiringi Lagu Mengheningkan Cipta</a>
+        </div>
+      </div>
+      <a class="card-tools"><paper-button class="custom brown">pesan tiket</iron-icon></paper-button><paper-icon-button noink icon="social:share"></paper-icon-button><paper-icon-button noink icon="favorite"></paper-icon-button></a>
+      <div class="info lomba-saya">
+        <a>27 hari lagi</a>
+        <a>50 tiket terjual</a>
+      </div>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'page-lomba',
+    });
+  </script>
+</dom-module>
