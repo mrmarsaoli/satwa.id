@@ -1,0 +1,183 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../bower_components/iron-form/iron-form.html">
+<link rel="import" href="../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../bower_components/iron-image/iron-image.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="page-home">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+        padding: 0px;
+      }
+
+			main{
+				background: #57281e;
+				width: 320px;
+				height: 500px;
+				margin:0 auto;
+				margin-top: 0;
+				padding: 0;
+			}
+			.login {
+				@apply(--layout-vertical);
+				width: calc(100% - 40px);
+				margin: 0 auto;
+				color: #fddccd;
+				padding:0;
+				box-sizing: border-box;
+				margin-top:80px;
+			}
+
+			.login a{
+				color:#fddccd;
+			}
+
+			.login div{
+				margin-bottom:20px;
+			}
+
+			.login div:last-child, .login div:first-child{
+				text-align:center;
+			}
+
+			.inp{
+				color:#fddccd;
+				font-size: 16px;
+				padding:10px 0px;
+				margin-bottom: 20px;
+				width: 100%;
+				background: none;
+				border: none;
+				border-bottom: thin solid #ddd;
+				box-sizing: border-box;
+			}
+
+			paper-button.lgn_button{
+				background:#39bc9c;
+				width:60%;
+				color:#fff;
+				border-radius:20px;
+				font-size:14px;
+			}
+
+			paper-button.lupass{
+				float:right;
+				font-size:14px;
+				margin:0;
+				padding:0;
+				margin-bottom:20px;
+				text-transform: lowercase;
+			}
+
+			paper-button.alt{
+				width:calc(50% - 10px);
+				border-radius:20px;
+				font-size:14px;
+				margin:0;
+				margin-bottom:40px;
+			}
+
+			paper-button.alt iron-icon{
+				margin-right:5px;
+			}
+
+			paper-button.google_button{
+				background: #fff;
+				float:left;
+				color: #444;
+			}
+
+			paper-button.facebook_button{
+				background:#3b5998;
+				float:right;
+				color: #fff;
+			}
+
+			.h-line{
+				margin:0;
+				padding:0 10px;
+				background:#57281e;
+				display:inline-block;
+			}
+
+			h4{
+
+				text-align:center;
+				position:relative;
+				z-index:2;
+				font-weight:500;
+				color:#b2857f;
+
+			}
+
+			h4:after{
+				content:"";
+				position:absolute;
+				top:50%;
+				left:0;
+				right:0;
+				border-top:solid 1px #b2857f;
+				z-index:-1;
+			}
+
+			#logo-satwa{
+				width: 110px;
+				height: 25px;
+			 }
+    </style>
+
+		<main>
+			<div class="container login">
+				<div>
+					<iron-image sizing="contain" id="logo-satwa" alt="logo" src="../temp.png"></iron-image>
+				</div>
+				<div>
+					<form is="iron-form" method="get" action="/" id="basic">
+						<input name="username" class="inp" type="text" placeholder="username">
+						<input name="password" class="inp" type="password" placeholder="password">
+						<a><paper-button class="custom lupass" noink>waduh! saya lupa password</paper-button></a>
+						<div style="clear: both"></div>
+						<center><paper-button raised onclick="_submit(event)" class="custom lgn_button">masuk</paper-button></center>
+					</form>
+				</div>
+				<div>
+					<h4><span class="h-line">atau masuk mengunakan</span></h4>
+					<paper-button raised class="alt google_button"><iron-icon src="../icon/google.png"></iron-icon>google</paper-button>
+					<paper-button raised class="alt facebook_button"><iron-icon src="../icon/facebook.png"></iron-icon>facebook</paper-button>
+					<br>
+					belum punya akun? <a href="">Daftar</a>
+				</div>
+			</div>
+		</main>
+
+  </template>
+
+  <script>
+    Polymer({
+      is: 'page-login',
+    });
+
+		function _submit(event) {
+			Polymer.dom(event).localTarget.parentElement.submit();
+		}
+
+		basic.addEventListener('iron-form-submit', function(event) {
+			this.querySelector('.output').innerHTML = JSON.stringify(event.detail);
+		});
+  </script>
+</dom-module>

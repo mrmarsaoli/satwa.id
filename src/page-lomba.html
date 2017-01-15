@@ -18,8 +18,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <style include="shared-styles">
       :host {
         display: block;
-
-        padding: 5px 0px;
       }
 
 
@@ -33,32 +31,34 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       .simple-card{
         background: #fff;
         margin-top: 10px;
+        padding: 5px;
 
       }
 
       .lomba-saya {}
 
       .simple-card img{
-        width: 100px;
+        width: 120px;
         float: left;
-        margin:  0px 5px;
         height:80px;
+        margin-right: 5px;
         object-fit: cover;
       }
 
       .judul-holder{
         float: left;
-        width: calc(100% - 115px);
-        margin-right: 5px;
+        width: calc(100% - 125px);
+
       }
 
       .judul-holder a{
         text-transform: capitalize;
         color: #444;
+        font-family:Source Sans Semi Bold;
       }
 
       .judul-holder span{
-        font-size: 12px;
+        font-size: 14px;
         opacity: 0.8;
         display: block;
         margin-top: 5px;
@@ -78,38 +78,43 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         border-right: thin solid #ddd;
       }
     </style>
-    <h3>Lomba Terdaftar</h3>
-    <div class="simple-card">
-      <img src="../img/eximage.jpg">
-      <div class="judul-holder">
-        <a>Lomba Ikan Beat Box Mengiringi Lagu Mengheningkan Cipta</a>
-        <span>30 hari lagi</span>
-      </div>
-      <div style="clear:both"></div>
-    </div>
-    <div class="simple-card">
-      <img src="../img/eximage.jpg">
-      <div class="judul-holder">
-        <a>na na na nananana  hey jude</a>
-        <span>30 hari lagi</span>
-      </div>
-      <div style="clear:both"></div>
-    </div>
-    <br>
-    <h3>Lomba Saya</h3>
-    <div class="card lomba-saya">
-      <img class="img" src="../img/eximage.jpg">
-      <div class="container lomba-saya">
-        <div class="judul">
+    <paper-header-panel class="custom header" mode="scroll">
+      <paper-toolbar>
+        <div id="main-title"><center><img src="../images/white.png"></center><a><iron-icon icon="my-icons:bell"></iron-icon></a></div>
+      </paper-toolbar>
+      <h3>Lomba Terdaftar</h3>
+      <div class="simple-card">
+        <img src="../img/eximage.jpg">
+        <div class="judul-holder">
           <a>Lomba Ikan Beat Box Mengiringi Lagu Mengheningkan Cipta</a>
+          <span>30 hari lagi</span>
+        </div>
+        <div style="clear:both"></div>
+      </div>
+      <div class="simple-card">
+        <img src="../img/eximage.jpg">
+        <div class="judul-holder">
+          <a>na na na nananana  hey jude</a>
+          <span>30 hari lagi</span>
+        </div>
+        <div style="clear:both"></div>
+      </div>
+      <br>
+      <h3>Lomba Saya</h3>
+      <div class="card lomba-saya">
+        <img class="img" src="../img/eximage.jpg">
+        <div class="container lomba-saya">
+          <div class="judul">
+            <a>Lomba Ikan Beat Box Mengiringi Lagu Mengheningkan Cipta</a>
+          </div>
+        </div>
+        <a class="card-tools"><paper-button class="custom brown">pesan tiket</iron-icon></paper-button><paper-icon-button noink icon="social:share"></paper-icon-button><paper-icon-button noink icon="favorite"></paper-icon-button></a>
+        <div class="info lomba-saya">
+          <a>27 hari lagi</a>
+          <a>50 tiket terjual</a>
         </div>
       </div>
-      <a class="card-tools"><paper-button class="custom brown">pesan tiket</iron-icon></paper-button><paper-icon-button noink icon="social:share"></paper-icon-button><paper-icon-button noink icon="favorite"></paper-icon-button></a>
-      <div class="info lomba-saya">
-        <a>27 hari lagi</a>
-        <a>50 tiket terjual</a>
-      </div>
-    </div>
+    </paper-header-panel>
   </template>
 
   <script>

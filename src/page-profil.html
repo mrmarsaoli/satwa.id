@@ -1,20 +1,18 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/iron-image/iron-image.html">
-<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
-<link rel="import" href="../bower_components/paper-badge/paper-badge.html">
 <link rel="import" href="../bower_components/paper-button/paper-button.html">
 <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="shared-styles.html">
 
 <dom-module id="page-profil">
   <!-- Defines the element's style and local DOM -->
   <template>
-    <style>
+    <style include="shared-styles">>
       :host {
         display: block;
-        padding: 5px 0px;
       }
 
-      .container{
+      .block{
         @apply(--layout-vertical);
         margin: 0px 5px;
         margin-bottom: 10px;
@@ -25,37 +23,30 @@
         margin-top: 10px;
       }
 
-      .container div{
+      .block div{
         background: #fff;
         display: inline-block;
         text-transform: capitalize;
-        font-size: 16px;
         padding: 0px 10px;
         width: 100%;
         box-sizing: border-box;
         margin: 0;
       }
 
-      .container div:first-child{
+      .block div:first-child{
         border-bottom: thin solid #EFF2F7;
       }
 
-      .container.four div:first-child{
+      .block.four div:first-child{
         border-bottom: none;
       }
 
-      .container div span{
+      .block div span{
         line-height: 40px;
       }
 
-      .container div paper-icon-button{
+      .block div paper-icon-button{
         float: right
-      }
-
-      .container div > paper-badge {
-        --paper-badge-margin-left: 40px;
-        --paper-badge-margin-bottom: -20px;
-        --paper-badge-background: #FF6060;
       }
 
       .logout a{
@@ -83,23 +74,23 @@
       }
 
     </style>
-
-    <div class="container one">
-      <center><iron-image sizing="cover" id="profilpic" alt="The Polymer logo." src="../img/eximage.jpg"></iron-image></center>
-      <a>Osas</a>
-      <center><paper-button>edit profil</paper-button></center>
-    </div>
-    <div class="container two">
-      <div class="custom profil"><span id="kotak-masuk">kotak masuk</span><paper-badge for="kotak-masuk" label="9"></paper-badge><paper-icon-button icon="chevron-right"></paper-icon-button></div>
-      <div class="custom profil"><span>pesan terikirim</span><paper-icon-button icon="chevron-right"></paper-icon-button></div>
-    </div>
-    <div class="container three">
-      <div class="custom profil"><span>kritik & saran</span><paper-icon-button icon="chevron-right"></paper-icon-button></div>
-      <div class="custom profil"><span>pusat bantuan</span><paper-icon-button icon="chevron-right"></paper-icon-button></div>
-    </div>
-    <div class="container four">
-      <div class="custom logout"><span><a>keluar</a></span><paper-icon-button icon="chevron-right"></paper-icon-button></div>
-    </div>
+    <paper-header-panel class="custom header" mode="scroll">
+      <paper-toolbar>
+        <div id="main-title"><center><img src="../images/white.png"></center><a><iron-icon icon="my-icons:bell"></iron-icon></a></div>
+      </paper-toolbar>
+      <div class="block one">
+        <center><iron-image sizing="cover" id="profilpic" alt="The Polymer logo." src="../img/eximage.jpg"></iron-image></center>
+        <a>Osas</a>
+        <center><paper-button>edit profil</paper-button></center>
+      </div>
+      <div class="block three">
+        <div class="custom profil"><span>kritik & saran</span><paper-icon-button icon="chevron-right"></paper-icon-button></div>
+        <div class="custom profil"><span>pusat bantuan</span><paper-icon-button icon="chevron-right"></paper-icon-button></div>
+      </div>
+      <div class="block four">
+        <div class="custom logout"><span><a>keluar</a></span><paper-icon-button icon="chevron-right"></paper-icon-button></div>
+      </div>
+    </paper-header-panel>
   </template>
   <script>
     Polymer({

@@ -17,7 +17,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <style include="shared-styles">
       :host {
         display: block;
-        padding: 5px 0px;
       }
 
       paper-button.brown{
@@ -31,9 +30,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         --iron-icon-fill-color: #3377BB;
       }
     </style>
+    <paper-header-panel class="custom header" mode="scroll">
+      <paper-toolbar>
+        <div id="main-title"><center><img src="../images/white.png"></center><a><iron-icon icon="my-icons:bell"></iron-icon></a></div>
+      </paper-toolbar>
         <paper-button raised class="custom brown"><span>206</span>Jumlah hewan dijual</paper-button>
         <paper-button raised class="custom brown"><span>5</span>Hewan terjual</paper-button>
         <paper-button raised class="custom brown"><iron-icon icon="add-circle"></iron-icon></div>Tambah hewan</paper-button>
+      </paper-header-panel>
   </template>
 
   <script>

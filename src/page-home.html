@@ -20,15 +20,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         padding: 0px;
       }
 
-      img{
-        width: 326px;
-        height: 200px;
+      img.slider{
+        width: 100%;
+        height: 240px;
         object-fit: cover;
         position: absolute;
       }
 
       #slider{
-        height: 160px;
+        height: 200px;
       }
 
       paper-button.blue{
@@ -57,14 +57,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         --iron-icon-height: 30px;
       }
     </style>
-    <img src="../img/eximage.jpg">
-    <div id="slider">
-    </div>
-    <paper-button raised class="custom yellow"><div class="circle"><iron-icon icon="pets"></iron-icon></div>Cari hewan</paper-button>
-    <paper-button raised class="custom pink"><div class="circle"><iron-icon icon="today"></iron-icon></div>Cari Lomba</paper-button>
-    <paper-button raised class="custom yellow"><div class="circle"><iron-icon icon="add-shopping-cart"></iron-icon></div>Jual hewan</paper-button>
-    <paper-button raised class="custom pink"><div class="circle"><iron-icon icon="add-circle-outline"></iron-icon></div>Buat Lomba</paper-button>
-    <paper-button raised class="custom blue"><div class="circle"><iron-icon icon="search"></iron-icon></div>Pelajari bagaimana Satwa.id memudahkan Anda dalam mengelola lomba</paper-button>
+    <paper-header-panel class="custom header" mode="scroll">
+      <paper-toolbar>
+        <div id="main-title"><center><img src="../images/white.png"></center><a><iron-icon icon="my-icons:bell"></iron-icon></a></div>
+      </paper-toolbar>
+      <img class="img slider" src="../img/eximage.jpg">
+      <div id="slider">
+      </div>
+      <paper-button raised class="custom yellow"><div class="circle"><iron-icon icon="pets"></iron-icon></div>Cari hewan</paper-button>
+      <paper-button raised class="custom pink"><div class="circle"><iron-icon icon="today"></iron-icon></div>Cari Lomba</paper-button>
+      <paper-button raised class="custom yellow"><div class="circle"><iron-icon icon="add-shopping-cart"></iron-icon></div>Jual hewan</paper-button>
+      <paper-button raised class="custom pink"><div class="circle"><iron-icon icon="add-circle-outline"></iron-icon></div>Buat Lomba</paper-button>
+      <paper-button raised class="custom blue"><div class="circle"><iron-icon icon="search"></iron-icon></div>Pelajari bagaimana Satwa.id memudahkan Anda dalam mengelola lomba</paper-button>
+    </paper-header-panel>
   </template>
 
   <script>

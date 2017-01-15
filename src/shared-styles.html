@@ -14,6 +14,34 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <dom-module id="shared-styles">
   <template>
     <style>
+      paper-header-panel.header{
+        height:calc(100vh - 57px);
+      }
+
+      paper-toolbar{
+        color: #fff;
+        background-color: var(--app-primary-color);
+      }
+
+      app-header paper-icon-button {
+        --paper-icon-button-ink-color: white;
+      }
+
+      #main-title{
+        width: 100%;
+      }
+
+      #main-title img{
+        width: 86px;
+      }
+
+      #main-title iron-icon{
+        position: absolute;
+        right: 16px;
+        top:20px;
+        float: right;
+      }
+
       h3{
         margin: 5px;
         color: #444;
@@ -38,12 +66,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       .card img.img{
         width: 100%;
-        height: 150px;
+        height: 220px;
         object-fit: cover;
-      }
-
-      .card.post-hewan img.img{
-        height: 100px;
       }
 
       paper-button.custom{
@@ -51,7 +75,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         padding: 20px 10px;
         text-transform:capitalize;
         color: #777;
-        font-weight: bold;
+        font-family:Source Sans Semi Bold;
         font-size: 15px;
         border-radius: 5px;
         float: left;
@@ -86,21 +110,25 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       .judul{
-        min-height: 60px;
+        min-height: 40px;
         margin-bottom: 10px;
       }
 
       .judul a{
         color:#444;
+        font-family:Source Sans Semi Bold;
         font-size: 14px;
         text-transform: capitalize;
       }
 
-      .info{
-        font-size: 13px;
+      .info.post-hewan a:first-child{
+        float: left;
+        background: #CB5F27;
+        padding: 2px 3px;
+        color: #fff;
       }
 
-      .info.post-hewan a{
+      .info.post-hewan a:nth-child(2){
         float: right;
       }
 
@@ -125,7 +153,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         display: block;
         width: 100%;
         position: absolute;
-        top: 110px;
+        top: 180px;
         background-color:rgba(0, 0, 0, 0.5);
       }
 
@@ -147,10 +175,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         float: right;
         margin-right: 10px;
         color: #fff;
-        opacity: 0.52;
       }
 
-      .a.card-tools paper-button iron-icon{
+      a.card-tools paper-icon-button.liked{
+        --iron-icon-fill-color:#FF6060;
+      }
+
+      a.card-tools paper-button iron-icon{
         --iron-icon-width: 20px;
         margin-right: 5px
       }
